@@ -25,6 +25,7 @@ public class ShopMain {
         }
         Menu menu = new Menu();
         menu.menuControl(cars);
+        in.close();
     }
 }
 

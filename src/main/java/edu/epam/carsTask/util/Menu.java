@@ -55,14 +55,14 @@ public class Menu {
 
     public void menuBrandFind(Shop cars){
         System.out.println("What brand do u want to find?");
-        String brand = in.nextLine();
+        String brand = in.next();
         ArrayList<Car> neededCars = service.findBrand(cars, brand);
         report.printNeededCars(neededCars);
     }
 
     public void menuModelWithAgeFind(Shop cars){
         System.out.println("What model do u need?");
-        String model = in.nextLine();
+        String model = in.next();
         System.out.println("What age do u need?");
         int age = in.nextInt();
         ArrayList<Car> neededCars = service.findModelWithAge(cars, model, age);
