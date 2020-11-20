@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ShopService {
 
-    public ArrayList<Car> findBrand(Shop cars, String brand) {
+    public ArrayList<Car> findCarWithBrand(Shop cars, String brand) {
         ArrayList<Car> currentCars= new ArrayList<>();
 
         for (int i = 0; i < cars.size(); i++) {

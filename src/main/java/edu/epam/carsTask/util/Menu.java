@@ -56,7 +56,7 @@ public class Menu {
     public void menuBrandFind(Shop cars){
         System.out.println("What brand do u want to find?");
         String brand = in.next();
-        ArrayList<Car> neededCars = service.findBrand(cars, brand);
+        ArrayList<Car> neededCars = service.findCarWithBrand(cars, brand);
         report.printNeededCars(neededCars);
     }
 
