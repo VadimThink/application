@@ -1,5 +1,7 @@
 package edu.epam.carsTask.entity;
 
+import java.util.Objects;
+
 public class Car {
 
     private int id;
@@ -90,4 +92,22 @@ public class Car {
         this.year = year;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return id == car.id &&
+                year == car.year &&
+                price == car.price &&
+                color.equals(car.color) &&
+                brand.equals(car.brand) &&
+                model.equals(car.model) &&
+                registrationNumber.equals(car.registrationNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, color, brand, year, model, price, registrationNumber);
+    }
 }

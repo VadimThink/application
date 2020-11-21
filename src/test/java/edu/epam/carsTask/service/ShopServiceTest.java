@@ -27,7 +27,7 @@ public class ShopServiceTest {
         ArrayList<Car> expected = new ArrayList<>();
         Car expectedCar = new Car(1000001, "green", "audi", 2002, "r8", 100, "HB2002-3");
         expected.add(expectedCar);
-        assertSame(actual, expected);
+        assertEquals(actual, expected);
     }
 
 
@@ -39,7 +39,7 @@ public class ShopServiceTest {
         ArrayList<Car> expected = new ArrayList<>();
         Car expectedCar = new Car(1000002, "blue", "ford", 2003, "gt", 105, "EV5673-4");
         expected.add(expectedCar);
-        assertSame(actual, expected);
+        assertEquals(actual, expected);
     }
 
     @Test
@@ -50,6 +50,6 @@ public class ShopServiceTest {
         ArrayList<Car> expected = new ArrayList<>();
         Car expectedCar = new Car(1000001, "green", "audi", 2002, "r8", 100, "HB2002-3");
         expected.add(expectedCar);
-        assertSame(actual, expected);
+        assertEquals(actual, expected);
     }
 }

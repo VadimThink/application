@@ -1,6 +1,7 @@
 package edu.epam.carsTask.entity;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Shop {
 
@@ -25,6 +26,19 @@ public class Shop {
         return "Shop{" +
                 "cars=" + cars +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Shop shop = (Shop) o;
+        return cars.equals(shop.cars);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cars);
     }
 }
 
